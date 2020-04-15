@@ -26,6 +26,10 @@ public class LoginPage {
 		driver.manage().window().maximize();
 		driver.get("https://www.longdom.com/support/");
 		System.out.println("-- Launched Browser -- ");
+		
+		System.out.println("Current URL : "+driver.getCurrentUrl());
+		
+		
 		driver.findElement(By.id("user_name")).clear();
 		driver.findElement(By.id("user_name")).sendKeys("U5T0363");
 		System.out.println("Entered user name");
@@ -34,6 +38,8 @@ public class LoginPage {
 		System.out.println("Entered password");
 		driver.findElement(By.id("log_submit")).click();
 		System.out.println("Clicked on login button.");
+		Thread.sleep(2000);
+		System.out.println("Timer : "+driver.findElement(By.id("timer")).getText());
 	}
 	
 }

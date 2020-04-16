@@ -6,7 +6,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features="Feature", 
-glue="pulse/longdom/stepDef", monochrome=true)
+glue="pulse/longdom/stepDef", monochrome=true, strict = true)
 public class TestRunner {
 
 }
